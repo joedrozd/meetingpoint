@@ -1,14 +1,32 @@
 [
   {
-    "question": "What is BoxyHQ?",
-    "answer": "Enterprise readiness for B2B SaaS, straight out of the box."
+    "question": "🔍 What is CyberHeroes?",
+    "answer": "CyberHeroes is an affordable, user-friendly platform that educates the general public about fraud prevention and internet safety through interactive lessons, real-time alerts, and practical tools.",
+    "badges": ["Featured", "New User"]
   },
   {
-    "question": "What BoxyHQ offers?",
-    "answer": "At BoxyHQ we enable you to add plug-and-play enterprise-ready features to your SaaS product. Show enterprise customers and InfoSec teams you are ready to pass their processes with flying colors. We are open-source and free!"
+    "question": "🛡️ How does CyberHeroes protect me?",
+    "answer": "We provide: 1) Bite-sized video lessons on scam detection, 2) Real-time SMS/email alerts about new threats (via Twilio API), 3) Interactive quizzes, and 4) Personalized safety tips (powered by AI analysis).",
+    "comparison": {
+      "Antivirus": ["Device protection", "Malware focus"],
+      "CyberHeroes": ["Human protection", "Scam behavior focus"]
+    }
   },
   {
-    "question": "Is BoxyHQ offers developer security tools?",
-    "answer": "We have curated a list of awesome open-source developer security tools.It includes security principles and controls relevant to popular compliance certifications (like ISO27001, SOC2, MVSP, etc.)"
+    "question": "💲 Is CyberHeroes really free?",
+    "answer": "Yes! Our free tier includes essential training. Premium ($5/month) adds family protection and live webinars. Business ($20/month) includes team dashboards.",
+    "highlight": ["$5/month", "$20/month"]
+  },
+  {
+    "question": "How is this different from antivirus software?",
+    "answer": "While antivirus protects your devices, CyberHeroes protects YOU by teaching how to recognize phishing attempts, social engineering scams, and other human-targeted threats that software can't always catch."
+  },
+  {
+    "question": "Can businesses use CyberHeroes?",
+    "answer": "Absolutely! Our Business plan ($20/month) includes team dashboards, compliance reporting, and custom training modules to protect your employees - especially valuable for small businesses without dedicated IT security staff."
+  },
+  {
+    "question": "How do you keep my data safe?",
+    "answer": "We practice what we preach: end-to-end encryption, zero data sales to third parties, and optional anonymous usage. Your safety training shouldn't compromise your privacy."
   }
 ]

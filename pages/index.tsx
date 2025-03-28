@@ -11,7 +11,7 @@ import PricingSection from '@/components/defaultLanding/PricingSection';
 import useTheme from 'hooks/useTheme';
 import env from '@/lib/env';
 import Head from 'next/head';
-
+import bg from './homepage.jpg';
 const Home: NextPageWithLayout = () => {
   const { toggleTheme, selectedTheme } = useTheme();
   const { t } = useTranslation('common');
@@ -22,11 +22,22 @@ const Home: NextPageWithLayout = () => {
         <title>{t('homepage-title')}</title>
       </Head>
 
-      <div className="container mx-auto">
-        <div className="navbar bg-base-100 px-0 sm:px-1">
+      <div className="container-fluid mx-auto" >
+      <div 
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bg.src})`,
+      }}
+    >
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
+      
+      {/* Content container with relative positioning */}
+      <div className="relative z-10">
+        <div className="navbar bg-transparent px-0 sm:px-1">
           <div className="flex-1">
-            <Link href="/" className="btn btn-ghost text-xl normal-case">
-              BoxyHQ
+            <Link href="/" className="btn btn-ghost text-xl normal-case text-white">
+              CyberHeroes
             </Link>
           </div>
           <div className="flex-none">
@@ -34,7 +45,7 @@ const Home: NextPageWithLayout = () => {
               {env.darkModeEnabled && (
                 <li>
                   <button
-                    className="bg-none p-0 rounded-lg flex items-center justify-center"
+                    className="bg-none p-0 rounded-lg flex items-center justify-center text-white hover:bg-white/10"
                     onClick={toggleTheme}
                   >
                     <selectedTheme.icon className="w-5 h-5" />
@@ -52,7 +63,7 @@ const Home: NextPageWithLayout = () => {
               <li>
                 <Link
                   href="/auth/login"
-                  className="btn btn-primary dark:border-zinc-600 dark:border-2 dark:text-zinc-200 btn-outline py-3 px-2 sm:px-4 btn-md"
+                  className="btn bg-white/10 hover:bg-white/20 text-white border-none py-3 px-2 sm:px-4 btn-md"
                 >
                   {t('sign-in')}
                 </Link>
@@ -61,6 +72,8 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
         <HeroSection />
+      </div>
+    </div>
         <div className="divider"></div>
         <FeatureSection />
         <div className="divider"></div>

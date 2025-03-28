@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import Image from 'next/image'
 
 const HeroSection = () => {
   const { t } = useTranslation('common');
@@ -7,23 +8,17 @@ const HeroSection = () => {
     <div className="hero py-52">
       <div className="hero-content text-center">
         <div className="max-w-7xl">
-          <h1 className="text-5xl font-bold"> {t('enterprise-saas-kit')}</h1>
-          <p className="py-6 text-2xl font-normal">
-            {t('kickstart-your-enterprise')}
+              <Image
+            src="/logo.png"
+            alt="cyberheroes logo"
+            width={350}
+            height={200}
+              />
+          <p className="py-6 text-2xl font-normal text-white">
+            Stay safe on the net, and keep scams in the bin
           </p>
           <div className="flex items-center justify-center gap-2 ">
-            <Link
-              href="/auth/join"
-              className="btn btn-primary px-8 no-underline"
-            >
-              {t('get-started')}
-            </Link>
-            <Link
-              href="https://github.com/boxyhq/saas-starter-kit"
-              className="btn btn-outline px-8"
-            >
-              GitHub
-            </Link>
+            
           </div>
         </div>
       </div>
